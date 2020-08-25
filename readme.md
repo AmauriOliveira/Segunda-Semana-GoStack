@@ -34,26 +34,18 @@ yarn add eslint@6.8.0 -D
 yarn eslint --init
 ```
 
-To check syntax, find problems, and enforce code style
-JavaScript modules (import/export)
-None of these
-Yes
-Node
-Use a popular style guide
-Airbnb: https://github.com/airbnb/javascript
-JSON
-No
+- To check syntax, find problems, and enforce code style
+- JavaScript modules (import/export)
+- None of these
+- Yes
+- Node
+- Use a popular style guide
+- Airbnb: https://github.com/airbnb/javascript
+- JSON
+- No
 
 ```bash
 yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
-```
-
-`.eslintignore` 
-
-```
-/*.js
-node_modules
-dist
 ```
 
 ## :star2: Contributing
