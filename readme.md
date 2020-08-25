@@ -11,16 +11,20 @@ git push -u origin master
 ## :telescope: Overview
 
   [🏠 Homepage](https://github.com/AmauriOliveira/Segunda-Semana-GoStackk)
-Durante a primeira semana eu aprendo a básico sobre a Stack, ReactJS, NodeJS, React Native e sobre o TypeScript. Como iniciar e configurar os projetos além do conceito por trás de cada tecnologia.
-## :computer: Techs
-  
-- react native
-- javascript
-- ReactJS
-- NodeJS
-- TypeScript
 
+## :Node com TypeScript
 
+- Sempre adicione o typescript como dependência de desenvolvimento e depois rode yarn tsc --init para gerar o arquivo de configuração.
+
+- Sempre que adicionar um pacote verifique se tem o @types dele e instale como dependência de desenvolvimento.
+
+-yarn tsc, converte TypeScript em JavaScript.
+
+- yarn add ts-node-dev -D, extremamente rápido para se visualizar modificações feito no código em tempo de desenvolvimento.
+
+  ts-node-dev --transpileOnly --ignore-watch node_module src/server.ts
+  --transpileOnly, não vai verificar sem tem erros de tipos.
+  --ignore-watch node_module, ignora a observação e compilação da pasta node_module.
 
 ## :star2: Contributing
 
