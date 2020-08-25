@@ -22,9 +22,39 @@ git push -u origin master
 
 - yarn add ts-node-dev -D, extremamente rápido para se visualizar modificações feito no código em tempo de desenvolvimento.
 
-  ts-node-dev --transpileOnly --ignore-watch node_module src/server.ts
-  --transpileOnly, não vai verificar sem tem erros de tipos.
+  ts-node-dev --transpile-only --ignore-watch node_module src/server.ts
+  --transpile-only, não vai verificar sem tem erros de tipos.
   --ignore-watch node_module, ignora a observação e compilação da pasta node_module.
+
+```bash
+yarn add eslint@6.8.0 -D
+```
+
+```bash
+yarn eslint --init
+```
+
+To check syntax, find problems, and enforce code style
+JavaScript modules (import/export)
+None of these
+Yes
+Node
+Use a popular style guide
+Airbnb: https://github.com/airbnb/javascript
+JSON
+No
+
+```bash
+yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
+```
+
+`.eslintignore` 
+
+```
+/*.js
+node_modules
+dist
+```
 
 ## :star2: Contributing
 
