@@ -1,7 +1,5 @@
 # Segunda semana GoStack
 
-git push -u origin master
-
 > Aqui tem todo código feito na minha jornada de aprendizagem
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/amaurioliveira/Segunda-Semana-GoStack)
@@ -14,27 +12,45 @@ git push -u origin master
 
 ## Node com TypeScript
 
-### Aprendi sobre:
+### Aprendi sobre
+
+----
 
 - Sempre adicione o typescript como dependência de desenvolvimento e depois rode yarn tsc --init para gerar o arquivo de configuração.
 
 - Sempre que adicionar um pacote verifique se tem o @types dele e instale como dependência de desenvolvimento.
 
--yarn tsc, converte TypeScript em JavaScript.
+```bash
+yarn tsc
+```
 
-- yarn add ts-node-dev -D, extremamente rápido para se visualizar modificações feito no código em tempo de desenvolvimento.
+  > converte TypeScript em JavaScript.
 
+```bash
+- yarn add ts-node-dev -D
+```
+
+  > Extremamente rápido para se visualizar modificações feito no código em tempo de desenvolvimento.
+
+```bash
   ts-node-dev --transpile-only --ignore-watch node_module src/server.ts
-  --transpile-only, não vai verificar sem tem erros de tipos.
-  --ignore-watch node_module, ignora a observação e compilação da pasta node_module.
+```
+
+ --transpile-only, não vai verificar sem tem erros de tipos.
+
+ --ignore-watch node_module, ignora a observação e compilação da pasta node_module.
 
 - Models, que ele representa uma entidade (tabela) no banco de dados.
 
-- Repository, que eles malipula os dados das models.
+- Repository, que eles manipulam os dados das models.
 
-- Services, fica com a responsabilidade sobre toda regras de negocios.
+- Services, fica com a responsabilidade sobre todas regras de negócios.
 
-- SoC, Separation of Concerns (Separação de Preocupação), que cada parte do codigo tenha apenas uma preocupação.
+### SOLID
+
+- SoC, Separation of Concerns (Separação de Preocupação), que cada parte do código tenha apenas uma preocupação.
+
+- Dependency Inversion (Inversão de Dependência), sempre que tem uma dependência externa deve receber a instancia como parâmetro do construtor da classe
 
 ### Instalar o eslint no node
 
@@ -45,6 +61,8 @@ yarn add eslint@6.8.0 -D
 ```bash
 yarn eslint --init
 ```
+
+> Respostas
 
 - To check syntax, find problems, and enforce code style
 - JavaScript modules (import/export)
