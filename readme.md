@@ -12,7 +12,9 @@ git push -u origin master
 
   [🏠 Homepage](https://github.com/AmauriOliveira/Segunda-Semana-GoStackk)
 
-## :Node com TypeScript
+## Node com TypeScript
+
+### Aprendi sobre:
 
 - Sempre adicione o typescript como dependência de desenvolvimento e depois rode yarn tsc --init para gerar o arquivo de configuração.
 
@@ -25,6 +27,16 @@ git push -u origin master
   ts-node-dev --transpile-only --ignore-watch node_module src/server.ts
   --transpile-only, não vai verificar sem tem erros de tipos.
   --ignore-watch node_module, ignora a observação e compilação da pasta node_module.
+
+- Models, que ele representa uma entidade (tabela) no banco de dados.
+
+- Repository, que eles malipula os dados das models.
+
+- Services, fica com a responsabilidade sobre toda regras de negocios.
+
+- SoC, Separation of Concerns (Separação de Preocupação), que cada parte do codigo tenha apenas uma preocupação.
+
+### Instalar o eslint no node
 
 ```bash
 yarn add eslint@6.8.0 -D
