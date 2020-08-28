@@ -78,6 +78,70 @@ yarn eslint --init
 yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
 ```
 
+### Docker
+
+Comando para criar um container
+
+```bash
+docker run --name GoBarber-postgres -d -p 5432:5432 -e POSTGRES_PASSWORD=amauri32 postgres
+```
+
+>Levantando um container do PostgreSQL na porta 5432
+
+```bash
+docker ps
+```
+
+>Lista todos container ativos
+
+```bash
+docker ps -a
+```
+
+>Lista todos container ativos e não ativos
+
+```bash
+docker start **id**
+```
+
+```bash
+docker stop **id**
+```
+
+>Ligar e desligar o containers, o ID é o que vem ao executar docker ps
+
+### Migration
+
+Elas serve para controlar a versão do banco de dados, assim como o git faz com os codigos.
+
+>Requer configuração no ormconfig.json
+
+```bash
+yarn typeorm migration:create -n CreateAppointments
+```
+
+Só pode ser alterada caso ainda não tenha dido mandando para um controle de versão, ou seja ela está apenas em sua maquina, caso contrario tem de criar uma nova migration para fazer as auteração.
+
+>No exemplo foi criado uma chamada CreateAppointments
+
+```bash
+yarn typeorm migration:run
+```
+
+>Rodando as migration apos criar e configurar
+
+```bash
+yarn typeorm migration:revert
+```
+
+>Para limpar as migration que foram execultadas
+
+```bash
+yarn typeorm migration:show
+```
+
+>Para mostrar o status das migration
+
 ## :star2: Contributing
 
 Contributions, issues and feature requests are welcome!
@@ -90,10 +154,13 @@ Feel free to check [issues page](https://github.com/amaurioliveira/Segunda-Seman
 
 ## :bow: Author
 
-**Amauri Oliveira** 
-* Email: amauriibate32@hotmail.com
-* GitHub: [@amaurioliveira](https://github.com/amaurioliveira)
-* LinkedIn: [@amauri-oliveira-058066192](https://linkedin.com/in/amauri-oliveira-058066192)
+### Amauri Oliveira
+
+*Email: amauriibate32@hotmail.com
+
+*GitHub: [@amaurioliveira](https://github.com/amaurioliveira)
+
+*LinkedIn: [@amauri-oliveira-058066192](https://linkedin.com/in/amauri-oliveira-058066192)
 
 ## :books: License
 
