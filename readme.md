@@ -92,13 +92,13 @@ docker run --name GoBarber-postgres -d -p 5432:5432 -e POSTGRES_PASSWORD=amauri3
 docker ps
 ```
 
->Lista todos container ativos
+>Lista todos containers ativos
 
 ```bash
 docker ps -a
 ```
 
->Lista todos container ativos e não ativos
+>Lista todos containers ativos e não ativos
 
 ```bash
 docker start **id**
@@ -108,11 +108,11 @@ docker start **id**
 docker stop **id**
 ```
 
->Ligar e desligar o containers, o ID é o que vem ao executar docker ps
+>Ligar e desligar os containers, o ID é o que vem ao executar “docker os”
 
 ### Migration
 
-Elas serve para controlar a versão do banco de dados, assim como o git faz com os codigos.
+Elas servem para controlar a versão do banco de dados, assim como o git faz com os códigos.
 
 >Requer configuração no ormconfig.json
 
@@ -120,7 +120,7 @@ Elas serve para controlar a versão do banco de dados, assim como o git faz com 
 yarn typeorm migration:create -n CreateAppointments
 ```
 
-Só pode ser alterada caso ainda não tenha dido mandando para um controle de versão, ou seja ela está apenas em sua maquina, caso contrario tem de criar uma nova migration para fazer as auteração.
+Só pode ser alterada caso ainda não tenha sido mandando para um controle de versão, ou seja ela está apenas em sua máquina, caso contrário tem de criar uma nova migration para fazer as alterações.
 
 >No exemplo foi criado uma chamada CreateAppointments
 
@@ -128,13 +128,13 @@ Só pode ser alterada caso ainda não tenha dido mandando para um controle de ve
 yarn typeorm migration:run
 ```
 
->Rodando as migration apos criar e configurar
+>Rodando as migration após criar e configurar
 
 ```bash
 yarn typeorm migration:revert
 ```
 
->Para limpar as migration que foram execultadas
+>Para limpar as migration que foram executadas
 
 ```bash
 yarn typeorm migration:show
