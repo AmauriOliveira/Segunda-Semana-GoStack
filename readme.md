@@ -142,6 +142,18 @@ yarn typeorm migration:show
 
 >Para mostrar o status das migration
 
+### JWT
+
+>Uma forma de gerar um sistema de Sesstion com token que tem data de expiração
+
+Site para gerar um MD5
+
+<http://www.md5.cz/>
+
+Site para testar o Token
+
+<https://jwt.io/>
+
 ## :star2: Contributing
 
 Contributions, issues and feature requests are welcome!
