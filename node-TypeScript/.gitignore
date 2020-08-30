@@ -58,3 +58,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+tmp/*
+!tmp/.gitkeep
+temp/

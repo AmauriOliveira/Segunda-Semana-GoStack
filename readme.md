@@ -146,6 +146,11 @@ yarn typeorm migration:show
 
 >Uma forma de gerar um sistema de Sesstion com token que tem data de expiração
 
+### Git
+
+>.gitkeep arquivo serve para mandar uma pasta vazia, por padrão não são mandadas
+>!tmp/.gitkeep, ao usar isso no arquivo .gitignore abre uma exceção
+
 Site para gerar um MD5
 
 <http://www.md5.cz/>
