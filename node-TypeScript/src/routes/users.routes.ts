@@ -35,21 +35,17 @@ usersRouter.patch(
   ensureAuthenticated,
   upload.single('avatar'),
   async (request, response) => {
-    try {
-      // cria o bojeto
-      const updateUserAvatarService = new UpdateUserAvatarService();
-      // execulta o metodo do objeto
-      const user = await updateUserAvatarService.execute({
-        user_id: request.user.id,
-        avatarFileName: request.file.filename,
-      });
-      // remover o password do retorno
-      delete user.password;
-      // manda o retorno
-      return response.json(user);
-    } catch (err) {
-      return response.status(400).json({ error: err.message });
-    }
+    // cria o bojeto
+    const updateUserAvatarService = new UpdateUserAvatarService();
+    // execulta o metodo do objeto
+    const user = await updateUserAvatarService.execute({
+      user_id: request.user.id,
+      avatarFileName: request.file.filename,
+    });
+    // remover o password do retorno
+    delete user.password;
+    // manda o retorno
+    return response.json(user);
   },
 );
 
