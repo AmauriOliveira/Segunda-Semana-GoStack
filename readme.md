@@ -159,6 +159,18 @@ Site para testar o Token
 
 <https://jwt.io/>
 
+## DDD
+
+>Domain Driver Design
+
+DDD é uma metodologia que se aplica somente ao backend, onde cada se separa os arquivos com base em qual dominio eles estão relacinados.
+
+## TDD
+
+> Test Driver Development
+
+TDD é uma mtetodologia onde você primeiro cria os testes que tem as regras de como a aplicação deve funcionar.
+
 ## :star2: Contributing
 
 Contributions, issues and feature requests are welcome!
