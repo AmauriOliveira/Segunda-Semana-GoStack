@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { container } from 'tsyringe';
 
 import multer from 'multer';
 import uploadConfig from '@config/upload';
@@ -13,20 +14,17 @@ const upload = multer(uploadConfig);
 
 // cria user
 usersRouter.post('/', async (request, response) => {
-  try {
-    // desestrutura
-    const { name, email, password } = request.body;
-    // cria um objeto
-    const createUserService = new CreateUserService();
-    // passa os dado para o metodo do objeto
-    const user = await createUserService.exceute({ name, email, password });
-    // remove o password da resposta
-    delete user.password;
-    // retorna o jsom com o objeto
-    return response.json(user);
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
+  // desestrutura
+  const { name, email, password } = request.body;
+
+  // cria um objeto
+  const createUserService = container.resolve(CreateUserService);
+  // passa os dado para o metodo do objeto
+  const user = await createUserService.exceute({ name, email, password });
+  // remove o password da resposta
+  delete user.password;
+  // retorna o jsom com o objeto
+  return response.json(user);
 });
 // muda o avatar
 // o nome do upload deve ser o mesmo do campo que enviar no formulario
@@ -36,7 +34,7 @@ usersRouter.patch(
   upload.single('avatar'),
   async (request, response) => {
     // cria o bojeto
-    const updateUserAvatarService = new UpdateUserAvatarService();
+    const updateUserAvatarService = container.resolve(UpdateUserAvatarService);
     // execulta o metodo do objeto
     const user = await updateUserAvatarService.execute({
       user_id: request.user.id,

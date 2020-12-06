@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { container } from 'tsyringe';
 
 import AuthenticateUserSession from '@modules/users/services/AuthenticateUserSession';
 
@@ -8,7 +9,8 @@ sessionsRouter.post('/', async (request, response) => {
   // desestrutura
   const { email, password } = request.body;
   // cria um objeto
-  const authenticateUserSession = new AuthenticateUserSession();
+
+  const authenticateUserSession = container.resolve(AuthenticateUserSession);
   // passa os dado para o metodo do objeto
   const { user, token } = await authenticateUserSession.execute({
     email,
