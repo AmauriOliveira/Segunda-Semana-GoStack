@@ -4,7 +4,7 @@
 
 Que nossa aplicação continue funcionando independentemente do número de novas funcionalidades e do número de devs no time
 
-### Teste Unitários
+### Testes Unitários
 
 Testam funcionalidades especificas de nossa aplicação e precisa sem função puras.
 
@@ -88,3 +88,25 @@ Snapshots:   0 total
 Time:        6.686 s, estimated 16 s
 Ran all test suites.
 Done in 10.38s.
+
+```javascript
+describe('CreateAppointment', () => {
+  it('Should be able to create a new appointment', () => {
+    expect(1 + 2).toBe(3);
+  });
+});
+```
+
+```bath
+yarn test
+```
+
+CreateAppointment
+    √ Should be able to create a new appointment (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6.727 s, estimated 7 s
+Ran all test suites.
+Done in 10.54s.
